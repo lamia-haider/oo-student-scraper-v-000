@@ -21,7 +21,8 @@ class Scraper
     s = Nokogiri::HTML(open(profile_url))
     quote = s.css('.profile-quote').text
     bio = s.css('.description-holder').text
-    links = s.css('.social-icon-container')
+    links = ss.css('.social-icon-container a').attr('href').detect do |l| l.include?('linkedin')
+    end
     binding.pry
   end
 
