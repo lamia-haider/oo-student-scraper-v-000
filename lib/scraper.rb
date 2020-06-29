@@ -4,13 +4,13 @@ require 'pry'
 class Scraper
 
   def self.scrape_index_page(url)
-    students = []
+    scraped_students = []
     d = Nokogiri::HTML(open(url))
     d.css('.student-card').collect do |sc|
       student_name = sc.css('.student-name').text
       student_location = sc.css('.student-location').text
       student_profile_link = sc.css('a').attr('href').value
-      students << {name: student_name, location: student_location, profile_url: student_profile_link}
+      scraped_ students << {name: student_name, location: student_location, profile_url: student_profile_link}
 
     #  binding.pry
     end
