@@ -44,7 +44,7 @@ class Scraper
     #   else student[:blog] = l
     #   end
     # end
-    binding.pry
+  #  binding.pry
   end
 
 end
