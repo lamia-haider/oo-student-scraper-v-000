@@ -9,9 +9,9 @@ class Scraper
     d.css('.student-card').collect do |sc|
       student_name = sc.css('.student-name').text
       student_location = sc.css('.student-location').text
-      student_profile_link = "#{sc.attr('href')}"
+      student_profile_link = sc.css('a').attr('href').value
 
-      binding.pry
+    #  binding.pry
     end
   end
 
