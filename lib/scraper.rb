@@ -23,7 +23,7 @@ class Scraper
     bio = s.css('.description-holder').text
     links = ss.css('.social-icon-container a').attr('href').detect do |l| l.include?('linkedin')
     end
-    binding.pry
+#    binding.pry
   end
 
 end
