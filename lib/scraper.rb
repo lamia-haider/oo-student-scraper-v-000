@@ -24,13 +24,13 @@ class Scraper
     bio = s.css('.description-holder').text
     links = s.css('.social-icon-container a').attr('href').collect do |l|
     end
-      if l.include?('linkedin')
-        student[:linkedin] = l
-      elsif l.include?('github')
-        student[:github] = l
-      else student[:blog] = l
-      end
-    end
+    #   if l.include?('linkedin')
+    #     student[:linkedin] = l
+    #   elsif l.include?('github')
+    #     student[:github] = l
+    #   else student[:blog] = l
+    #   end
+    # end
     binding.pry
   end
 
