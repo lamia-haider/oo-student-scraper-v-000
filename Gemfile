@@ -2,5 +2,5 @@
 source "https://rubygems.org"
 
 gem 'pry'
-gem 'nokogiri'
+gem 'nokogiri', '1.6.8.1'
 gem 'rspec'
