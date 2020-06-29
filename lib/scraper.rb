@@ -22,7 +22,7 @@ class Scraper
     student = {}
     student[:profile_quote] = s.css('.profile-quote').text
     student[:bio] = s.css('div.bio-content.content-holder div.description-holder p').text
-    links = s.css('.social-icon-container a').collect do |link| link.attr('href')
+    links = s.css('.social-icon-container a').collect do |link| link.attr('href').value
     end
 
     links.each do |link|
