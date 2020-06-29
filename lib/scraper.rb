@@ -12,7 +12,6 @@ class Scraper
       student_profile_link = sc.css('a').attr('href').value
       scraped_students << {name: student_name, location: student_location, profile_url: student_profile_link}
 
-     binding.pry
     end
   end
 
