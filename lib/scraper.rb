@@ -10,6 +10,7 @@ class Scraper
       student_name = sc.css('.student-name').text
       student_location = sc.css('.student-location').text
       student_profile_link = sc.css('a').attr('href').value
+      students << {name: student_name, location: student_location, profile_url: student_profile_link}
 
     #  binding.pry
     end
